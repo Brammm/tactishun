@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace Brammm\CommandBus\Tests;
 
 use Brammm\CommandBus\CommandBus;
+use Brammm\CommandBus\CommandHandler as CommandHandlerInterface;
+use Brammm\CommandBus\Middleware\Middleware;
 use Brammm\CommandBus\Tests\TestImplementations\Command;
 use Brammm\CommandBus\Tests\TestImplementations\CommandHandler;
 use Brammm\CommandBus\Tests\TestImplementations\CommandWithNotACommandHandler;
@@ -36,5 +38,36 @@ final class CommandBusTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
         $this->commandBus->handle(new CommandWithNotACommandHandler());
+    }
+
+    public function testItProcessesMiddleware(): void
+    {
+        $fooMiddleware = new class implements Middleware {
+            public function process(object $command, CommandHandlerInterface $commandHandler): void
+            {
+                if ($command instanceof Command) {
+                    $command->name .= 'Foo';
+                }
+
+                $commandHandler->handle($command);
+            }
+        };
+        $barMiddleware = new class implements Middleware {
+            public function process(object $command, CommandHandlerInterface $commandHandler): void
+            {
+                if ($command instanceof Command) {
+                    $command->name .= 'Bar';
+                }
+
+                $commandHandler->handle($command);
+            }
+        };
+
+        $this->commandBus->add($fooMiddleware);
+        $this->commandBus->add($barMiddleware);
+
+        $this->commandBus->handle(new Command('John'));
+
+        self::assertEquals('JohnFooBar', $this->container->get(CommandHandler::class)->name);
     }
 }

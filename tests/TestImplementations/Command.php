@@ -7,7 +7,7 @@ namespace Brammm\CommandBus\Tests\TestImplementations;
 use Brammm\CommandBus\HandledBy;
 
 #[HandledBy(CommandHandler::class)]
-final readonly class Command
+final class Command
 {
     public function __construct(
         public string $name,
