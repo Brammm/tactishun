@@ -19,6 +19,7 @@ final class Container implements ContainerInterface
     {
         $this->classes = [
             CommandHandler::class => new CommandHandler(),
+            NotACommandHandler::class => new NotACommandHandler(),
         ];
     }
 

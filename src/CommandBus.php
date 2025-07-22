@@ -6,8 +6,8 @@ namespace Brammm\CommandBus;
 
 use Brammm\CommandBus\Resolver\AttributeCommandHandlerResolver;
 use Brammm\CommandBus\Resolver\CommandHandlerResolver;
+use InvalidArgumentException;
 use Psr\Container\ContainerInterface;
-use RuntimeException;
 
 final readonly class CommandBus
 {
@@ -24,7 +24,7 @@ final readonly class CommandBus
         );
 
         if (! $handler instanceof CommandHandler) {
-            throw new RuntimeException('Not a valid CommandHandler');
+            throw new InvalidArgumentException('Not a valid CommandHandler');
         }
 
         $handler->handle($command);

@@ -20,11 +20,11 @@ final class AttributeCommandHandlerResolverTest extends TestCase
 
         self::assertEquals(CommandHandler::class, $handler);
     }
-    
+
     public function testItThrowsExceptionIfCommandDoesNotHaveAssertion(): void
     {
         $resolver = new AttributeCommandHandlerResolver();
-        
+
         $this->expectException(MissingHandledByAttribute::class);
         $resolver->resolve(new CommandWithoutAttribute('John'));
     }

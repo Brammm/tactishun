@@ -6,12 +6,14 @@ namespace Brammm\CommandBus\Resolver;
 
 use InvalidArgumentException;
 
+use function sprintf;
+
 final class MissingHandledByAttribute extends InvalidArgumentException
 {
     /**
-     * @template T of object
-     * 
      * @param class-string<T> $command
+     *
+     * @template T of object
      */
     public function __construct(string $command)
     {
