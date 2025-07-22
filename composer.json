@@ -1,0 +1,17 @@
+{
+    "name": "brammm/command-bus",
+    "description": "A simple PHP 8 command bus implementation",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Brammm\\CommandBus\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bram Van der Sype",
+            "email": "bram.vandersype@gmail.com"
+        }
+    ],
+    "require": {}
+}
