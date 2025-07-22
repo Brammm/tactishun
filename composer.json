@@ -7,11 +7,26 @@
             "Brammm\\CommandBus\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Brammm\\CommandBus\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Bram Van der Sype",
             "email": "bram.vandersype@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^12.2",
+        "doctrine/coding-standard": "^13.0",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-strict-rules": "^2.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
 }
