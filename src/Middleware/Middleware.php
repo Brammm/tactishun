@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Brammm\CommandBus\Middleware;
+namespace Brammm\Tactishun\Middleware;
 
-use Brammm\CommandBus\CommandHandler;
+use Brammm\Tactishun\CommandHandler;
 
 interface Middleware
 {

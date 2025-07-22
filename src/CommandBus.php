@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Brammm\CommandBus;
+namespace Brammm\Tactishun;
 
-use Brammm\CommandBus\Middleware\Middleware;
-use Brammm\CommandBus\Resolver\AttributeCommandHandlerResolver;
-use Brammm\CommandBus\Resolver\CommandHandlerResolver;
+use Brammm\Tactishun\Middleware\Middleware;
+use Brammm\Tactishun\Resolver\AttributeCommandHandlerResolver;
+use Brammm\Tactishun\Resolver\CommandHandlerResolver;
 use InvalidArgumentException;
 use Psr\Container\ContainerInterface;
 

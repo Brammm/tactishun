@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Brammm\CommandBus\Tests;
+namespace Brammm\Tactishun\Tests;
 
-use Brammm\CommandBus\CommandBus;
-use Brammm\CommandBus\CommandHandler as CommandHandlerInterface;
-use Brammm\CommandBus\Middleware\Middleware;
-use Brammm\CommandBus\Tests\TestImplementations\Command;
-use Brammm\CommandBus\Tests\TestImplementations\CommandHandler;
-use Brammm\CommandBus\Tests\TestImplementations\CommandWithNotACommandHandler;
-use Brammm\CommandBus\Tests\TestImplementations\Container;
+use Brammm\Tactishun\CommandBus;
+use Brammm\Tactishun\CommandHandler as CommandHandlerInterface;
+use Brammm\Tactishun\Middleware\Middleware;
+use Brammm\Tactishun\Tests\TestImplementations\Command;
+use Brammm\Tactishun\Tests\TestImplementations\CommandHandler;
+use Brammm\Tactishun\Tests\TestImplementations\CommandWithNotACommandHandler;
+use Brammm\Tactishun\Tests\TestImplementations\Container;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 

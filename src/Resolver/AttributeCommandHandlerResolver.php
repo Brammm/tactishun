@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Brammm\CommandBus\Resolver;
+namespace Brammm\Tactishun\Resolver;
 
-use Brammm\CommandBus\HandledBy;
+use Brammm\Tactishun\HandledBy;
 use ReflectionClass;
 
 final readonly class AttributeCommandHandlerResolver implements CommandHandlerResolver

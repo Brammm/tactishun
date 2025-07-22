@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Brammm\CommandBus\Tests\TestImplementations;
+namespace Brammm\Tactishun\Tests\TestImplementations;
 
-use Brammm\CommandBus\HandledBy;
+use Brammm\Tactishun\HandledBy;
 
 #[HandledBy(CommandHandler::class)]
 final class Command

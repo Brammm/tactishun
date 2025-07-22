@@ -1,15 +1,15 @@
 {
-    "name": "brammm/command-bus",
+    "name": "brammm/tactishun",
     "description": "A simple PHP 8 command bus implementation",
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Brammm\\CommandBus\\": "src/"
+            "Brammm\\Tactishun\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Brammm\\CommandBus\\Tests\\": "tests/"
+            "Brammm\\Tactishun\\Tests\\": "tests/"
         }
     },
     "authors": [

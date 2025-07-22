@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Brammm\CommandBus\Tests\Resolver;
+namespace Brammm\Tactishun\Tests\Resolver;
 
-use Brammm\CommandBus\Resolver\AttributeCommandHandlerResolver;
-use Brammm\CommandBus\Resolver\MissingHandledByAttribute;
-use Brammm\CommandBus\Tests\TestImplementations\Command;
-use Brammm\CommandBus\Tests\TestImplementations\CommandHandler;
-use Brammm\CommandBus\Tests\TestImplementations\CommandWithoutAttribute;
+use Brammm\Tactishun\Resolver\AttributeCommandHandlerResolver;
+use Brammm\Tactishun\Resolver\MissingHandledByAttribute;
+use Brammm\Tactishun\Tests\TestImplementations\Command;
+use Brammm\Tactishun\Tests\TestImplementations\CommandHandler;
+use Brammm\Tactishun\Tests\TestImplementations\CommandWithoutAttribute;
 use PHPUnit\Framework\TestCase;
 
 final class AttributeCommandHandlerResolverTest extends TestCase

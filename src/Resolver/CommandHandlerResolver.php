@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Brammm\CommandBus\Resolver;
+namespace Brammm\Tactishun\Resolver;
 
-use Brammm\CommandBus\CommandHandler;
+use Brammm\Tactishun\CommandHandler;
 
 interface CommandHandlerResolver
 {

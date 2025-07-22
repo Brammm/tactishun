@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Brammm\CommandBus\Tests\TestImplementations;
+namespace Brammm\Tactishun\Tests\TestImplementations;
 
-use Brammm\CommandBus\CommandHandler as CommandHandlerInterface;
+use Brammm\Tactishun\CommandHandler as CommandHandlerInterface;
 
 /** @implements CommandHandlerInterface<Command> */
 final class CommandHandler implements CommandHandlerInterface

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Brammm\CommandBus\Tests\TestImplementations;
+namespace Brammm\Tactishun\Tests\TestImplementations;
 
 final class NotACommandHandler
 {

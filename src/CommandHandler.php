@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Brammm\CommandBus;
+namespace Brammm\Tactishun;
 
 /** @template T of object */
 interface CommandHandler
