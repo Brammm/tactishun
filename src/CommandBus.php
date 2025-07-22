@@ -4,17 +4,29 @@ declare(strict_types=1);
 
 namespace Brammm\CommandBus;
 
-use Brammm\CommandBus\Tests\TestCommand;
-use Brammm\CommandBus\Tests\TestCommandHandler;
+use Brammm\CommandBus\Resolver\AttributeCommandHandlerResolver;
+use Brammm\CommandBus\Resolver\CommandHandlerResolver;
+use Psr\Container\ContainerInterface;
+use RuntimeException;
 
-use function assert;
-
-final class CommandBus
+final readonly class CommandBus
 {
+    public function __construct(
+        private ContainerInterface $container,
+        private CommandHandlerResolver $commandHandlerResolver = new AttributeCommandHandlerResolver(),
+    ) {
+    }
+
     public function handle(object $command): void
     {
-        $handler = new TestCommandHandler();
-        assert($command instanceof TestCommand);
+        $handler = $this->container->get(
+            $this->commandHandlerResolver->resolve($command),
+        );
+
+        if (! $handler instanceof CommandHandler) {
+            throw new RuntimeException('Not a valid CommandHandler');
+        }
+
         $handler->handle($command);
     }
 }

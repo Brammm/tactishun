@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Brammm\CommandBus\Tests;
+namespace Brammm\CommandBus\Tests\TestImplementations;
 
-final class TestCommand
+final readonly class CommandWithoutAttribute
 {
     public function __construct(
         public string $name,
