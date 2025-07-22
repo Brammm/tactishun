@@ -6,7 +6,6 @@ namespace Brammm\CommandBus\Resolver;
 
 use Brammm\CommandBus\HandledBy;
 use ReflectionClass;
-use RuntimeException;
 
 final readonly class AttributeCommandHandlerResolver implements CommandHandlerResolver
 {
@@ -16,7 +15,7 @@ final readonly class AttributeCommandHandlerResolver implements CommandHandlerRe
         $attributes = $reflection->getAttributes(HandledBy::class);
 
         if ($attributes === []) {
-            throw new RuntimeException('No attribute defined');
+            throw new MissingHandledByAttribute($command::class);
         }
 
         return $attributes[0]->newInstance()->commandHandler;
