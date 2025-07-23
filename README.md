@@ -5,7 +5,7 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Build status][ico-build]][link-build]
 
-A lightweight command bus implementation for PHP 8.1+ projects, designed to provide a
+A lightweight command bus implementation for PHP 8.3+ projects, designed to provide a
 straightforward approach to hexagonal architecture and CQRS patterns.
 
 ## Features
