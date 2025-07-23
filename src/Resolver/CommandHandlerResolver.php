@@ -13,6 +13,8 @@ interface CommandHandlerResolver
      *
      * @return class-string<CommandHandler<T>>
      *
+     * @throws HandlerNotFound
+     *
      * @template T of object
      */
     public function resolve(object $command): string;
