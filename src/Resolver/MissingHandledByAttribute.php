@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace Brammm\Tactishun\Resolver;
 
-use InvalidArgumentException;
-
 use function sprintf;
 
-final class MissingHandledByAttribute extends InvalidArgumentException
+final class MissingHandledByAttribute extends HandlerNotFound
 {
     /**
      * @param class-string<T> $command
