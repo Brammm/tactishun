@@ -27,6 +27,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Nothing.
+
 ## 0.1.0 - 2025-07-22
 
 Initial release under 0.1.0 as package api might change.
@@ -51,3 +53,5 @@ Initial release under 0.1.0 as package api might change.
 - Nothing.
 
 ### Fixed
+
+- Nothing.
