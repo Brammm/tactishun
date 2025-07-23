@@ -1,17 +1,11 @@
 {
     "name": "brammm/tactishun",
-    "description": "A simple PHP 8 command bus implementation",
     "type": "library",
-    "autoload": {
-        "psr-4": {
-            "Brammm\\Tactishun\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Brammm\\Tactishun\\Tests\\": "tests/"
-        }
-    },
+    "description": "A simple PHP 8 command bus implementation",
+    "keywords": [
+        "command bus"
+    ],
+    "license": "LGPL-3.0-or-later",
     "authors": [
         {
             "name": "Bram Van der Sype",
@@ -28,7 +22,18 @@
         "phpstan/phpstan": "^2.1",
         "phpstan/phpstan-strict-rules": "^2.0"
     },
+    "autoload": {
+        "psr-4": {
+            "Brammm\\Tactishun\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Brammm\\Tactishun\\Tests\\": "tests/"
+        }
+    },
     "config": {
+        "sort-packages": true,
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
