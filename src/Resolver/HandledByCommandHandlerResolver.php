@@ -7,7 +7,7 @@ namespace Brammm\Tactishun\Resolver;
 use Brammm\Tactishun\HandledBy;
 use ReflectionClass;
 
-final readonly class AttributeCommandHandlerResolver implements CommandHandlerResolver
+final readonly class HandledByCommandHandlerResolver implements CommandHandlerResolver
 {
     public function resolve(object $command): string
     {

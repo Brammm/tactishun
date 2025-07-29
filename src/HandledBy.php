@@ -6,7 +6,7 @@ namespace Brammm\Tactishun;
 
 use Attribute;
 
-#[Attribute]
+#[Attribute(flags: Attribute::TARGET_CLASS)]
 final class HandledBy
 {
     /**
