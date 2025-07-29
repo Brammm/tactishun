@@ -21,7 +21,7 @@ final class HandledByCommandHandlerResolverTest extends TestCase
         self::assertEquals(CommandHandler::class, $handler);
     }
 
-    public function testItThrowsExceptionIfCommandDoesNotHaveAssertion(): void
+    public function testItThrowsExceptionIfCommandDoesNotHaveAttribute(): void
     {
         $resolver = new HandledByCommandHandlerResolver();
 
