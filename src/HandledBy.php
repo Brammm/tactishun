@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Brammm\Tactishun;
 
 use Attribute;
+use Brammm\Tactishun\CommandHandler\CommandHandler;
 
 #[Attribute(flags: Attribute::TARGET_CLASS)]
 final class HandledBy

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Brammm\Tactishun\Tests;
 
 use Brammm\Tactishun\CommandBus;
-use Brammm\Tactishun\CommandHandler as CommandHandlerInterface;
+use Brammm\Tactishun\CommandHandler\CommandHandler as CommandHandlerInterface;
 use Brammm\Tactishun\Middleware\Middleware;
 use Brammm\Tactishun\Tests\TestImplementations\Command;
 use Brammm\Tactishun\Tests\TestImplementations\CommandHandler;

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Brammm\Tactishun;
 
+use Brammm\Tactishun\CommandHandler\CommandHandler;
 use Brammm\Tactishun\Middleware\Middleware;
 use Brammm\Tactishun\Resolver\CommandHandlerResolver;
 use Brammm\Tactishun\Resolver\HandledByCommandHandlerResolver;
