@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Brammm\Tactishun\Middleware;
 
-use Brammm\Tactishun\CommandHandler;
+use Brammm\Tactishun\CommandHandler\CommandHandler;
 
 interface Middleware
 {

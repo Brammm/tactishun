@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Brammm\Tactishun;
 
+use Brammm\Tactishun\CommandHandler\CommandHandler;
 use Brammm\Tactishun\Middleware\Middleware;
-use Brammm\Tactishun\Resolver\AttributeCommandHandlerResolver;
 use Brammm\Tactishun\Resolver\CommandHandlerResolver;
+use Brammm\Tactishun\Resolver\HandledByCommandHandlerResolver;
 use InvalidArgumentException;
 use Psr\Container\ContainerInterface;
 
@@ -19,7 +20,7 @@ final class CommandBus
 
     public function __construct(
         private readonly ContainerInterface $container,
-        private readonly CommandHandlerResolver $commandHandlerResolver = new AttributeCommandHandlerResolver(),
+        private readonly CommandHandlerResolver $commandHandlerResolver = new HandledByCommandHandlerResolver(),
     ) {
     }
 

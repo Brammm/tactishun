@@ -28,8 +28,8 @@ composer require brammm/tactishun
 
 ```php
 use Brammm\Tactishun\CommandBus;
+use Brammm\Tactishun\CommandHandler\CommandHandler;
 use Brammm\Tactishun\HandledBy;
-use Brammm\Tactishun\CommandHandler;
 
 // 1. Create your command
 #[HandledBy(SendWelcomeMailHandler::class)]
@@ -58,9 +58,45 @@ $commandBus = new CommandBus($container);
 $commandBus->handle(new SendWelcomeMail($user->id));
 ```
 
-## Extending functionality
+## Usage
 
-### Middleware
+### Handling multiple commands with a single command handler
+
+It's possible to have multiple commands handled by a single command handler. Simply
+add the `HandledBy` attribute with the same handler to multiple command classes.
+
+For convenience, you can extend from the MultipleCommandsHandler (instead of using the
+CommandHandler interface). It forwards the command to separate `handleCommandName`
+methods.
+
+```php
+use Brammm\Tactishun\CommandHandler\MultipleCommandsHandler;
+use Brammm\Tactishun\HandledBy;
+
+#[HandledBy(UserCommandHandler::class)]
+final readonly class RegisterUser
+{
+}
+
+#[HandledBy(UserCommandHandler::class)]
+final readonly class DeactivateUser
+{
+}
+
+/** @extends MultipleCommandsHandler<RegisterUser|DeactivateUser> */
+final class UserCommandHandler extends MultipleCommandsHandler
+{
+    public function handleRegisterUser(RegisterUser $command): void
+    {
+    }
+
+    public function handleDeactivateUser(DeactivateUser $command): void
+    {
+    }
+}
+```
+
+### Extending functionality through middleware
 
 Extend functionality with middleware that wraps command execution:
 
