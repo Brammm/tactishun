@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Brammm\Tactishun;
+namespace Brammm\Tactishun\Resolver;
 
+use Brammm\Tactishun\HandlerFor;
 use Brammm\Tactishun\Resolver\CommandHandlerResolver;
 use Brammm\Tactishun\Resolver\HandlerNotFound;
 use ReflectionClass;
