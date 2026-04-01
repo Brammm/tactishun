@@ -33,7 +33,7 @@ jobs:
                   coverage: "none"
 
             - name: "Install dependencies (Composer)"
-              uses: "ramsey/composer-install@v3"
+              uses: "ramsey/composer-install@v4"
 
             - name: "Check code style"
               run: "vendor/bin/phpcs"
@@ -52,7 +52,7 @@ jobs:
                   coverage: "none"
 
             - name: "Install dependencies (Composer)"
-              uses: "ramsey/composer-install@v3"
+              uses: "ramsey/composer-install@v4"
 
             - name: "Statically analyze code (PHPStan)"
               run: "vendor/bin/phpstan"
@@ -94,7 +94,7 @@ jobs:
                   coverage: "none"
 
             - name: "Install dependencies (Composer)"
-              uses: "ramsey/composer-install@v3"
+              uses: "ramsey/composer-install@v4"
               with:
                   dependency-versions: "${{ matrix.composer-deps }}"
 
